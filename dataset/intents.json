@@ -1,0 +1,24 @@
+{
+    "intents": [
+      {
+        "tag": "cattle_breeding",
+        "patterns": [
+          "How do I breed cattle?",
+          "What is the best breeding method for cattle?"
+        ],
+        "responses": [
+          "Cattle can be bred naturally or through artificial insemination. Consult a vet for more advice."
+        ]
+      },
+      {
+        "tag": "cattle_health",
+        "patterns": [
+          "How do I ensure my cattle are healthy?",
+          "What are common diseases in cattle?"
+        ],
+        "responses": [
+          "Cattle health depends on proper feeding, housing, and regular vet checkups. Common diseases include foot-and-mouth disease, mastitis, and bovine tuberculosis."
+        ]
+      }
+    ]
+  }
