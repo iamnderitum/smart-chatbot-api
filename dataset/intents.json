@@ -19,6 +19,30 @@
         "responses": [
           "Cattle health depends on proper feeding, housing, and regular vet checkups. Common diseases include foot-and-mouth disease, mastitis, and bovine tuberculosis."
         ]
+      },
+      {
+        "tag": "greeting",
+        "patterns": [
+          "Hi",
+          "Hello",
+          "How are you?"
+        ],
+        "responses": [
+          "Hello! How can I assist you?",
+          "Hi there, what can I help you with?"
+        ]
+      },
+      {
+        "tag": "goodbye",
+        "patterns": [
+          "Bye",
+          "See you later",
+          "Goodbye"
+        ],
+        "responses": [
+          "Goodbye! Have a great day!",
+          "See you later!"
+        ]
       }
     ]
   }

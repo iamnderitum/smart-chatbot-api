@@ -51,6 +51,9 @@ def predict():
     response = get_response(prediction)
 
     return jsonify({'response': response})
-
+@app.route("/")
+def home():
+    message = "ChatBot Home page. Welcome to home of Intelligence"
+    return message
 if __name__ == "__main__":
     app.run(debug=True)
