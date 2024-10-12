@@ -7,7 +7,7 @@ from nltk.stem import PorterStemmer
 import nltk
 
 # Load the model and preprocessing data
-model = load_model('models/chatbot_model.h5')
+model = load_model('models/chatbot_improvemodel_functional.h5')
 tags = np.load('preprocessing/tags.npy', allow_pickle=True)
 all_words = np.load('preprocessing/all_words.npy', allow_pickle=True)
 
