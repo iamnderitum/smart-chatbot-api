@@ -93,4 +93,14 @@ np.save('preprocessing/y_train.npy', y_train)
 np.save('preprocessing/tags.npy', tags)
 np.save('preprocessing/all_words.npy', all_words)
 
+# Display Useful Information
 print("Saved X_train.npy, y_train.py, tags.npy, all_words.npy")
+print("Preprocessing complete and data saved.")
+print(f"Number of samples in X_train: {X_train.shape[0]}")
+print(f"Number of samples in y_train: {y_train.shape[0]}")
+print(f"Unique tags: {tags}")
+print(f"Number of unique tags: {len(tags)}")
+print(f"Sample of X_train data (first 5 samples): \n{X_train[:5]}")
+print(f"Sample of y_train data (first 5 samples): \n{y_train[:5]}")
+print(f"Unique words in the vocabulary: {len(all_words)}")
+print(f"Sample of all words: {all_words[:10]}")  # Display first 10 words for brevity

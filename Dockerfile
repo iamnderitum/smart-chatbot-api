@@ -15,6 +15,7 @@ COPY . .
 
 # Step 6: Download NLTK data
 RUN python -m nltk.downloader punkt
+RUN python preprocessing/preprocess_data.py && python training/train_model.py
 
 # Step 7: Expose the port your Flask app runs on
 EXPOSE 5000
