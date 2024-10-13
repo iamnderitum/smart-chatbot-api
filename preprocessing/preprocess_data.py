@@ -1,5 +1,6 @@
 import nltk
 import json
+import csv
 import numpy as np
 import random
 from nltk.stem import PorterStemmer
@@ -14,9 +15,21 @@ nltk.data.path.append('/home/iamnderitum/nltk_data')
 nltk.download('punkt_tab')
 stemmer = PorterStemmer()
 
-# Load the intents JSON dataset
+"""# Load the intents JSON dataset
 with open('dataset/intents.json') as file:
-    intents = json.load(file)
+    intents = json.load(file)"""
+
+# Load the intents CSV dataset
+with open("dataset/intents.csv") as file:
+    reader = csv.DictReader(file)
+    intents = []
+    for row in reader:
+        intent = {
+            "tag": row["tag"],
+            "patterns": row["patterns"].split(","),
+            "responses": row["responses"].split(",")
+        }
+        intents.append(intent)
 
 # Initialize lists to store words, labels, and the data
 all_words = []
