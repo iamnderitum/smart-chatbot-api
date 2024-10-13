@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  chatbot:
+    build: .
+    ports:
+      - "5001:5000" # Maps port 5001 on host to 5000 on container
+    volumes:
+      - .:/app
+    environment:
+      - FLASK_ENV=development
