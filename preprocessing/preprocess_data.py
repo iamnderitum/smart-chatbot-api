@@ -20,9 +20,10 @@ with open('dataset/intents.json') as file:
     intents = json.load(file)"""
 
 # Load the intents CSV dataset
-with open("dataset/intents.csv") as file:
+intents = []
+with open("dataset/intents.csv", mode="r") as file:
     reader = csv.DictReader(file)
-    intents = []
+    # intents = []
     for row in reader:
         intent = {
             "tag": row["tag"],
@@ -37,11 +38,20 @@ tags = []
 xy = []
 
 # Tokenize and stem words, add patterns and tags
-for intent in intents['intents']:
+for intent in intents:
     tag = intent['tag']
     tags.append(tag)
 
-    for pattern in intent['patterns']:
+    # Check if patterns are a string or list and handle accordingly
+    patterns = intent["patterns"]
+    if isinstance(patterns, str):
+        patterns = patterns.split(",")
+
+    elif isinstance(patterns, list):
+        # If patterns are in a list, we join  them into  a single string with a delimeter
+        patterns = [pattern for sublist in patterns for pattern in sublist] # # Flatten the list if needed
+
+    for pattern in patterns:
         # Tokenize each word
         words = nltk.word_tokenize(pattern)
         all_words.extend(words)
@@ -82,3 +92,5 @@ np.save('preprocessing/X_train.npy', X_train)
 np.save('preprocessing/y_train.npy', y_train)
 np.save('preprocessing/tags.npy', tags)
 np.save('preprocessing/all_words.npy', all_words)
+
+print("Saved X_train.npy, y_train.py, tags.npy, all_words.npy")
