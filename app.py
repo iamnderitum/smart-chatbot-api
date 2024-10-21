@@ -32,7 +32,7 @@ def preprocess_input(sentence):
     return bag_of_words
 
 def get_response(prediction):
-    # # Assuming the prediction is a 2D array like [[prob_class_1, prob_class_2, prob_class_3]]
+    # # Assuming the prediction is a 2D   array like [[prob_class_1, prob_class_2, prob_class_3]]
     class_index = np.argmax(prediction)
     class_probability = np.max(prediction)
 

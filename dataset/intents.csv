@@ -7,3 +7,7 @@ greeting,hi,Hello
 greeting,hello,hi there!
 farewell,goodbye,See you later.
 farewell,bye,Take care
+feeding,"what should I feed my cattle?,","Cattle are typically fed hay, silage, and grains. A balanced diet ensures healthy growth and productivity."
+feeding,how often should I feed my cows?,"Cows are usually fed twice a day, but it can vary based on their diet and needs."
+disease,what are common cattle diseases,"Common cattle diseases include Foot-and-Mouth Disease (FMD), Bovine Tuberculosis, and Mastitis."
+disease,how do I treat mastitis in my cows?,"Mastitis can be treated with antibiotics, but prevention through proper milking hygiene is crucial."
